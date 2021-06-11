@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>
+  Confirme la acción
+</h1>
+
+<div mat-dialog-content>
+  <p>{{mensaje}}</p>
+</div>
+
+<div class="button-row div-center">
+  <button mat-button color="warn" (click)="rechazar(false)">No</button>
+  <button mat-raised-button color="primary" (click)="aceptar(true)">Yes</button>
+</div>

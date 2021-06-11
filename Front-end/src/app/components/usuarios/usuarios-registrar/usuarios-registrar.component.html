@@ -1,0 +1,44 @@
+<form [formGroup]="formulario" class="form-container">
+  <mat-card-header>
+    <mat-card-title>Registro de usuarios</mat-card-title>
+  </mat-card-header>
+  <br>
+  <mat-card-content>
+    <mat-label>Esta pantalla permite registrar nuevos usuarios, asi como editar existentes.</mat-label>
+  </mat-card-content>
+  <br>
+  <br>
+  <mat-card-content>
+    <div class="full-width">
+      <mat-form-field class="full-width">
+        <input formControlName="nombre" matInput placeholder="Nombre de usuario">
+      </mat-form-field>
+    </div>
+    <div class="full-width">
+      <mat-form-field class="full-width">
+        <mat-select formControlName="rol_usuario" placeholder="Rol de usuario">
+          <mat-option>Seleccione</mat-option>
+          <ng-container *ngFor="let rol of roles">
+            <mat-option [value]="rol.nombre">{{rol.nombre}}</mat-option>
+          </ng-container>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="full-width">
+      <mat-form-field class="full-width">
+        <mat-select formControlName="activo" placeholder="Activo?">
+          <mat-option>Seleccione</mat-option>
+          <ng-container *ngFor="let estado of estadoList">
+            <mat-option [value]="estado">{{estado === 'S' ? 'SI' : 'NO'}}</mat-option>
+          </ng-container>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="button-row div-end">
+      <button mat-raised-button color="warn" (click)="cancelar(false)">Cancelar</button>
+      <button mat-raised-button color="primary" type="submit" (click)="guardar()">Guardar</button>
+    </div>
+  </mat-card-actions>
+</form>

@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+div.container{
+    margin: 0px 40px;
+}
+
+.fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+
+  form.normal-form{
+    margin: 10px;
+}
+
+.controles-container{
+    vertical-align: top;
+    width: 100%;
+    padding: 5%;    
+}
+
+.controles-container > * {
+    width: 100%;
+}
+
+.add-bottom-padding{
+    padding-bottom: 10px;
+}
+
+.button-row button{
+    margin: 5px;
+}
+
+.button-row button{
+    margin: 5px;
+}
+
+.div-end{
+    text-align: end;
+}
+
+table {
+    width: 100%;
+}
+
+.align-top{
+    vertical-align: top;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.div-center{
+    text-align: center;
+}
