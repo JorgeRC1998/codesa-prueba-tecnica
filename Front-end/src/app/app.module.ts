@@ -7,8 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { UsuarioComponent } from './components/usuarios/usuario/usuario.component';
-import { EmployeeService } from './shared/employee.service';
-// import { UsuariosService } from './services/usuarios/usuarios.service';
 
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
@@ -55,7 +53,6 @@ import { UsuariosConfirmacionComponent } from './components/usuarios/usuarios-co
     MatIconModule,
   ],
   providers: [
-    EmployeeService,
     DatePipe,
   ],
   bootstrap: [AppComponent]
